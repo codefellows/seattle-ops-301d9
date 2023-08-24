@@ -38,7 +38,8 @@ A well-designed menu system should provide a user-friendly way to interact with 
 
 ## Resources
 
-- [Bash conditional statement](https://linuxhint.com/bash_conditional_statement/)
+- [Review Ops 201 Challenges 06 - Conditionals](https://codefellows.github.io/ops-201-guide/curriculum/class-06/challenges/){:target="_blank"}
+- [Bash conditional statement](https://linuxhint.com/bash_conditional_statement/){:target="_blank"}
 
 ## Demonstration
 
