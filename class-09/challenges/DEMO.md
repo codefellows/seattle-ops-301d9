@@ -11,58 +11,52 @@ The demo code below introduces concepts necessary to complete the challenge.
 # Date of latest revision:      05/18/2023
 # Purpose:                      Python Conditionals
 
-# Variable Declarations
-forecast = "rain"
-sky = "cloudy"
-temperature = 25
-wind = "strong"
-pollen_count = 80
-humidity = 60
+# Video Game Challenge
+
+# Prompt the user for character attributes
+player_class = input("Choose your character class (mage/warrior/archer): ")
+enemy_health = int(input("Enter the enemy's health (integer): "))
+player_health = int(input("Enter your health (integer): "))
+enemy_strength = input("Enter the enemy's strength (boss/regular): ").lower()
+boss_shield_active = input("Is the boss's shield active? (yes/no): ").lower() == "yes"
 
 # Main
 
 # if statement
-if forecast == "rain":
-  print("It is raining! Don't forget your umbrella!")
+if player_class == "mage":
+    print("You have selected the mage class. Prepare your spells!")
 
 # if-else statement
-if sky == "cloudy":
-  print("The sky is cloudy.")
+if enemy_strength == "boss":
+    print("You are facing a powerful boss enemy!")
 else:
-  print("The sky is clear.")
+    print("You are encountering a regular enemy.")
 
 # if-elif-else statement
-if temperature < 40:
-  print("It's chilly outside.")
-elif temperature > 75:
-  print("It's warm outside.")
+if player_health >= 80:
+    print("You are in great shape for this battle!")
+elif player_health >= 50:
+    print("Your health is decent, but be cautious!")
 else:
-  print("The temperature is pretty moderate.")
+    print("Your health is low. Consider healing before the fight.")
 
 # Nested if statement
-if wind == "strong":
-  print("It's a windy day.")
-  if pollen_count > 70:
-    print("It's windy and a high pollen count! Ah-choo!")
-  elif pollen_count <= 70 and pollen_count > 30:
-    print("Careful out there, it's windy with a moderate pollen count.")
-  else:
-    print("No worries, it may be windy but there is a low pollen count today.")
-elif wind == "weak":
-  print("The wind is calm today.")
+if boss_shield_active:
+    print("The boss has an energy shield.")
+    if player_class == "mage":
+        print("As a mage, you can try to dispel the shield with your magic.")
+    else:
+        print("You may need a special weapon to break the shield.")
 else:
-  print("Wind conditions are unknown.")
+    print("The boss's shield is down. Attack now!")
 
-# Complex logical conditions
-if forecast == "rain" or wind == "strong":
-  print("The weather is too severe to be outside today!")
-elif temperature > 75 and humidity > 70:
-  print("It's hot and humid! Yuck!'")
-elif not forecast == "rain" and temperature <= 50:
-  print("This sounds like a perfect day.")
+# Complex logical condition
+if (enemy_strength == "boss" and boss_shield_active) or (enemy_health > 80 and player_health < 30):
+    print("This battle is extremely challenging! Be very careful.")
+elif enemy_strength != "boss" and player_health > 70 and player_class != "warrior":
+    print("You have the advantage. Crush your opponent!")
 else:
-  print("Weather conditions are unknown.")
+    print("Prepare for a standard battle.")
 
 # End
-
 ```
