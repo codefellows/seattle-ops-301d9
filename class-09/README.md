@@ -34,10 +34,14 @@ In the next class, we'll be working doing cloud computing with AWS.
 - Network traffic mirroring allows organizations to enforce network usage policies and monitor compliance with internal policies. It helps ensure that employees or users are not engaging in activities that violate company rules or introduce security risks.
 
 ### What
-- Concepts and Vocabulary listed here
-- Be sure NOT to provide the definitions in this document, students can fill them in as note
-- For example:
-- REST: A modern way to transfer _____ between 2 systems using the _____ protocol.
+- Network Traffic Mirroring: The process of copying and forwarding network traffic from one network segment or device to another for analysis and monitoring.
+- Promiscuous Mode: A network interface mode that allows a network card to capture all traffic on a network segment, not just traffic destined for its own MAC address.
+- Network Tap: A hardware device that provides a passive way to capture network traffic by physically tapping into a network cable.
+- SPAN (Switched Port Analyzer) or Port Mirroring: A feature on network switches that allows traffic from one or more ports to be mirrored to a designated monitoring port for analysis.
+- Mirror Port: The specific port on a network switch or router where mirrored traffic is sent for monitoring and analysis.
+- Capture Filter: A set of rules or criteria used to filter which network packets are captured and analyzed by a packet sniffer or network analyzer.
+- Capture Buffer: The storage area or memory allocated for temporarily storing captured network packets for analysis.
+- Application Performance Monitoring (APM): The practice of monitoring and analyzing network traffic to assess the performance of applications and services running on a network.
 
 ### How
 Network traffic mirroring involves duplicating and redirecting network traffic from one part of a network to another. Here's a step-by-step breakdown of how traffic mirroring works:
