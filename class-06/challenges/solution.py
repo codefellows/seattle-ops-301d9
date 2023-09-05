@@ -12,7 +12,6 @@
 # Date of last revision: 09/05/23
 # Purpose: Bash in Python 
 
-import os
 import subprocess
 
 # Define three variables

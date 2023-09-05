@@ -17,13 +17,17 @@ In Python, a function is a reusable block of code that performs a specific task 
     # Function code goes here
   ```
 
-**Function Parameters (Arguments)**\
+**Function Parameters (Arguments)**
 
   Functions can accept zero or more input values called parameters or arguments. Parameters are defined within the parentheses and allow you to pass data into the function. An argument is the value that is passed to the function to fulfill the parameter when it is invoked.
 
   ```python
   def greet(name):
     print(f"Hello, {name}!")
+
+  greet("Renee")
+  greet("Amleset")
+  greet("Jermain")
   ```
 
 **Function Body**
@@ -41,7 +45,7 @@ In Python, a function is a reusable block of code that performs a specific task 
   To use a function, you "call" it by using its name followed by parentheses. You can pass arguments to the function when you call it.
 
   ```python
-  result = add(3, 5)
+  add(3, 5)
   ```
 
 **Return Statement**
@@ -61,10 +65,16 @@ In Python, a function is a reusable block of code that performs a specific task 
 
   ```python
   def my_function():
-    """
-    This is a sample function with a docstring.
-    It does nothing.
-    """
+    """_summary_
+
+    Args:
+        a (int): _description_
+        b (str): _description_
+        c (bool, optional): _description_. Defaults to True.
+
+    Returns:
+        bool: _description_
+    """  
     pass
   ```
 
@@ -111,10 +121,10 @@ In Python, the terms "scripts," "modules," "packages," and "libraries" refer to 
   ```python
   # my_script.py
   def main():
-      print("Hello, world!")
+    print("Hello, world!")
 
   if __name__ == "__main__":
-      main()
+    main()
   ```
 
 **Modules:**
@@ -127,7 +137,7 @@ In Python, the terms "scripts," "modules," "packages," and "libraries" refer to 
   ```python
   # my_module.py
   def greet(name):
-      return f"Hello, {name}!"
+    return f"Hello, {name}!"
   ```
 
 **Packages:**
