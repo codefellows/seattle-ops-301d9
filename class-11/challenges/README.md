@@ -42,15 +42,6 @@ print(f"Available Memory: {memory_info.available} bytes")
 
 Keep in mind that you may need to install the `psutil` library using a package manager like pip (`pip install psutil`) before using it in your Python code.
 
-## Resources
-
-- [`psutil` Documentation](https://psutil.readthedocs.io/en/latest/){:target="blank"}
-- [Python libraries and their features](https://www.codingninjas.com/blog/2020/07/24/python-libraries-and-their-features/){:target="blank"}
-  - This article defines the terms module, package, and library in the context of understanding what libraries are.
-- [Psutil module in Python](https://www.geeksforgeeks.org/psutil-module-in-python/){:target="blank"}
-- [Five Python libraries for cyber security](https://medium.com/ediblesec/5-python-libraries-for-cyber-security-8f34f5f1e3b8){:target="blank"}
-  - If you're wondering what libraries you should be practicing to prepare yourself for a cyber role, have a look at Chris Doucette's top five in this article. The libraries mentioned in this article (requests and nmap in particular) should be used ethically and with a firm comprehension of what the tools do and any legal liabilities that may arise from improper use.
-
 ## Floats in Python
 
 In Python, a **float** is a data type that represents decimal numbers, also known as floating-point numbers. Floats are used to store real numbers, including both integers and numbers with fractional parts. They are a fundamental part of the Python language and are widely used for performing mathematical operations that involve non-integer values.
@@ -164,6 +155,15 @@ print(str_representation)  # Output: "MyClass instance with value: 42"
 In this example, the `__str__()` method is defined for the `MyClass` class to provide a custom string representation when `str()` is called on an instance of the class.
 
 It's worth noting that while `str()` aims to provide human-readable representations, `repr()` is more focused on creating unambiguous representations that can be used to recreate an object. In many cases, you'll want to implement both `__str__()` and `__repr__()` methods in your custom classes to cater to different use cases: one for human-readable output and the other for debugging and development purposes.
+
+## Resources
+
+- [`psutil` Documentation](https://psutil.readthedocs.io/en/latest/){:target="blank"}
+- [Python libraries and their features](https://www.codingninjas.com/blog/2020/07/24/python-libraries-and-their-features/){:target="blank"}
+  - This article defines the terms module, package, and library in the context of understanding what libraries are.
+- [Psutil module in Python](https://www.geeksforgeeks.org/psutil-module-in-python/){:target="blank"}
+- [Five Python libraries for cyber security](https://medium.com/ediblesec/5-python-libraries-for-cyber-security-8f34f5f1e3b8){:target="blank"}
+  - If you're wondering what libraries you should be practicing to prepare yourself for a cyber role, have a look at Chris Doucette's top five in this article. The libraries mentioned in this article (requests and nmap in particular) should be used ethically and with a firm comprehension of what the tools do and any legal liabilities that may arise from improper use.
 
 ## Demonstration
 
