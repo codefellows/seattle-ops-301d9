@@ -2,37 +2,43 @@
 
 ## Overview
 
-Powershell can be a powerful tool in administering Active Directory (AD) users and computers. Today you'll write a Powershell script to add a new user to AD.
+Powershell can be a powerful tool in administering Active Directory (AD) users and computers. PowerShell AD Automation refers to the use of PowerShell scripting to automate tasks and operations related to Active Directory. Today you'll write a Powershell script to add a new user to AD.
+
+## `New-ADUser` in Powershell
+
+The `New-ADUser` cmdlet in PowerShell is part of the Active Directory module and is used to create a new user account in an Active Directory domain. Active Directory is a directory service developed by Microsoft that manages and organizes network resources, including user accounts, groups, computers, and more. The `New-ADUser` cmdlet allows administrators to automate the process of creating user accounts.
+
+Here's a basic syntax and explanation of some common parameters for the `New-ADUser` cmdlet:
+
+```powershell
+New-ADUser -Name <UserName> -SamAccountName <SamAccountName> -UserPrincipalName <UPN> -GivenName <FirstName> -Surname <LastName> -DisplayName <DisplayName> -Path <OUPath> -AccountPassword (ConvertTo-SecureString -AsPlainText "<Password>" -Force) -Enabled $true
+```
+
+- `-Name`: Specifies the display name of the user.
+- `-SamAccountName`: Specifies the SAM (Security Accounts Manager) account name, which is a unique identifier for the user.
+- `-UserPrincipalName`: Specifies the User Principal Name (UPN) for the user. The UPN is in the format of user@domain.com and is used for user authentication.
+- `-GivenName`: Specifies the first name of the user.
+- `-Surname`: Specifies the last name of the user.
+- `-DisplayName`: Specifies the name that is displayed in the Active Directory Users and Computers console.
+- `-Path`: Specifies the Organizational Unit (OU) where the user account will be created.
+- `-AccountPassword`: Sets the user's password. You should use the `ConvertTo-SecureString` cmdlet to convert a plain text password into a secure string.
+- `-Enabled`: Sets whether the user account is enabled (`$true`) or disabled (`$false`).
+
+Here's an example of how you might use the `New-ADUser` cmdlet to create a new user account:
+
+```powershell
+New-ADUser -Name "John Cokos" -SamAccountName "jCokos" -UserPrincipalName "jCokos@contoso.com" -GivenName "John" -Surname "Cokos" -DisplayName "John Cokos" -Path "OU=Users,DC=contoso,DC=com" -AccountPassword (ConvertTo-SecureString -AsPlainText "P@ssw0rd" -Force) -Enabled $true
+```
+
+In this example, a new user account named "John Cokos" is created with the specified attributes and placed in the "Users" Organizational Unit of the "contoso.com" domain. The account is enabled, and the password is set to "P@ssw0rd" (which should be replaced with a strong password).
+
+Please note that using the `New-ADUser` cmdlet requires administrative privileges in Active Directory, and you should exercise caution and follow your organization's security policies when creating user accounts programmatically.
 
 ## Resources
 
-- You will need a Windows Server with AD DS installed and the server promoted to Domain Controller
+- You will need a Windows Server with AD DS installed and the server promoted to Domain Controller.
 - [Microsoft Documentation: New-ADUser](https://learn.microsoft.com/en-us/powershell/module/activedirectory/new-aduser?view=windowsserver2019-ps)
 
 ## Demonstration
 
 Refer to [DEMO.md](DEMO.md)
-
-## Notes
-
-- PowerShell AD Automation refers to the use of PowerShell scripting to automate tasks and operations related to Active Directory (AD).
-- PowerShell provides a dedicated module called **Active Directory Module for Windows PowerShell** (also known as AD PowerShell) that extends the PowerShell capabilities with a set of cmdlets specifically designed for AD administration.
-  - This module needs to be imported using the `Import-Module ActiveDirectory` command before using the AD-related cmdlets.
-  - This command is typically placed at the top of your PowerShell script or executed in the PowerShell console before running any AD related commands.
-- PowerShell scripts can be created, tested, and executed using PowerShell Integrated Scripting Environment (ISE) or directly in the PowerShell console.
-- With PowerShell AD Automation, you can perform a wide range of tasks, including:
-  - User Management
-    - Create, modify, and delete user accounts, set properties such as name, password, group membership, and organizational unit.
-  - Group Management
-    - Create, modify, and delete security groups and distribution lists, add or remove members, manage group properties.
-  - Computer Management
-    - Create, join, and remove computers from the domain, manage computer properties and attributes.
-  - OU Management
-    - Create, modify, and delete organizational units, move objects between OUs, manage OU properties.
-  - GPO Management
-    - Create, modify, and delete group policy objects, configure GPO settings, link GPOs to OUs.
-  - Query and Reporting
-    - Retrieve information from AD, perform searches based on various criteria, generate reports.
-  - Automation and Bulk Operations
-    - Perform bulk user creation, modification, or deletion, automate repetitive tasks, schedule scripts.
-- Review file permissions and the [chmod command](../../class-03/challenges/)
