@@ -3,7 +3,7 @@
 ## Class Outline
 
 1. Ops 301 Review & Exam Prep 
-1. Ops 401 Preview
+1. [Ops 401 Preview](https://codefellows.github.io/ops-401-cybersecurity-guide/curriculum/){:target="blank"}
 1. 301 Final Project Overview
 1. Ops 401 Entrance Exam 
 
