@@ -21,7 +21,7 @@ Previously we focused on Active Directory as a means of authenticating users on 
 Today we'll be exploring Group Policy and how we can use it to enforce Windows system configurations at scale across the organization.
 
 **Where we're headed**:
-Next class we will be installing WSUS and pushing Windows Updates to our endpoint as our final activity in this Server Administration module.
+Next class we will be preparing to take the 401 Entrance Exam and for Final Projects.
 
 ## Group Policy
 
